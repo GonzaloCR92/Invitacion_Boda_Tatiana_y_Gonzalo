@@ -432,6 +432,31 @@
     color:var(--ink-soft);
   }
 
+  /* Nota de colores reservados (sin nombrar los colores en texto) */
+  .reserved-colors-note{
+    margin:12px 0 0;
+    font-size:12px;
+    letter-spacing:1px;
+    color:var(--ink-soft);
+  }
+  .reserved-colors{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin-top:8px;
+  }
+  .color-swatch{
+    width:20px;
+    height:20px;
+    border-radius:4px;
+    display:inline-block;
+    border:1px solid rgba(0,0,0,0.15);
+    box-shadow:0 1px 2px rgba(0,0,0,0.15);
+  }
+  .swatch-magenta{background:var(--magenta);}
+  .swatch-petroleo{background:#5386B6;}
+  .swatch-blanco{background:#FFFFFF;}
+
   .timeline{
     background:var(--navy-deep);
     color:var(--ivory);
@@ -733,6 +758,12 @@
         <span class="info-icon">🤵🏻‍♂️👗</span>
         <h4>Código de vestimenta</h4>
         <p>Formal</p>
+        <p class="reserved-colors-note">Colores reservados para la familia</p>
+        <div class="reserved-colors" aria-hidden="true">
+          <span class="color-swatch swatch-magenta"></span>
+          <span class="color-swatch swatch-petroleo"></span>
+          <span class="color-swatch swatch-blanco"></span>
+        </div>
       </div>
       <div class="info-card">
         <span class="info-icon">✉️</span>
