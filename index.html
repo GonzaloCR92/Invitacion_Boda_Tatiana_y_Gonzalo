@@ -432,7 +432,7 @@
     color:var(--ink-soft);
   }
 
-  /* Nota de colores reservados (sin nombrar los colores en texto) */
+ /* Nota de colores reservados (sin nombrar los colores en texto) */
   .reserved-colors-note{
     margin:12px 0 0;
     font-size:12px;
@@ -631,7 +631,46 @@
   .music-toggle.show{display:flex;}
   .music-toggle.paused{opacity:.55;}
 
-  @media (prefers-reduced-motion: reduce){
+  .dress-code-frame{
+    max-width:420px;
+    aspect-ratio:876/696;
+    margin:20px auto 22px;
+  }
+  .event-card.gift h3{
+    margin:6px 0 0;
+  }
+
+  .qr-section{
+    padding:60px 32px 90px;
+  }
+  .qr-section h2{
+    font-family:'Parisienne', cursive;
+    font-weight:400;
+    font-size:36px;
+    color:var(--navy-mid);
+    margin:0 0 14px;
+  }
+  .qr-section p{
+    color:var(--ink-soft);
+    font-size:17px;
+    line-height:1.6;
+    margin:0 auto 28px;
+    max-width:420px;
+  }
+  .qr-frame{
+    display:inline-block;
+    padding:16px;
+    background:var(--ivory-dark);
+    border:1px solid var(--gold-soft);
+    border-radius:4px;
+  }
+  .qr-frame img{
+    display:block;
+    width:200px;
+    height:200px;
+  }
+
+    @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
   }
 
@@ -753,23 +792,29 @@
       <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Hacienda+Santibella+Cajica" target="_blank" rel="noopener">Cómo llegar</a>
     </section>
 
-    <section class="info-grid">
-      <div class="info-card">
-        <span class="info-icon">🤵🏻‍♂️👗</span>
-        <h4>Código de vestimenta</h4>
-        <p>Formal</p>
-        <p class="reserved-colors-note">Se reservan los siguientes colores</p>
+    <section class="event-card dress-code">
+      <span class="event-label">Código de vestimenta</span>
+      <div class="photo-frame dress-code-frame">
+        <img src="Dress_Code.jpg" alt="Código de vestimenta: formal">
+      </div>
+      <h3>Formal</h3>
+       <p class="reserved-colors-note">Se reservan los siguientes colores</p>
         <div class="reserved-colors" aria-hidden="true">
           <span class="color-swatch swatch-magenta"></span>
           <span class="color-swatch swatch-petroleo"></span>
           <span class="color-swatch swatch-blanco"></span>
         </div>
+    </section>
+
+    <section class="event-card gift">
+      <span class="event-label">Regalo</span>
+      <div class="event-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="10" y="24" width="44" height="30" rx="2"/>
+          <path d="M10 24 32 40 54 24"/>
+        </svg>
       </div>
-      <div class="info-card">
-        <span class="info-icon">✉️</span>
-        <h4>Regalo</h4>
-        <p>Lluvia de sobres</p>
-      </div>
+      <h3>Lluvia de sobres</h3>
     </section>
 
     <section class="timeline">
@@ -817,7 +862,7 @@
     <section class="photo-section">
       <div class="photo-frame">
         
-          <img src="Commitment.jpg" alt="Tatiana y Gonzalo">
+          <img src="C:\Users\10672886\Downloads\Commitment.jpg" alt="Tatiana y Gonzalo">
                 
       </div>
     </section>
@@ -826,6 +871,14 @@
       <h2>Confirma tu asistencia</h2>
       <p>Nos encantará contar contigo. Por favor confirma antes del 20 de octubre.</p>
       <a id="rsvpBtn" class="rsvp-btn" href="https://forms.gle/TQny2ZZyDCW55tZQ9" target="_blank" rel="noopener">Confirmar asistencia</a>
+    </section>
+
+    <section class="qr-section">
+      <h2>Comparte tus fotos</h2>
+      <p>Escanea este código QR para subir las fotos que tomes durante la celebración a nuestra carpeta compartida y ayúdanos a guardar cada recuerdo del día.</p>
+      <div class="qr-frame">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1ri8ZfriVNFE7stBx105JvtEUJbcLfwB3" alt="Código QR para subir fotos de la boda">
+      </div>
     </section>
 
     <footer>Tatiana &amp; Gonzalo · 07 · 11 · 2026</footer>
